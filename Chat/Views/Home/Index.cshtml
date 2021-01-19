@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<Body>
+
+    <h1 class="display-4">Chat</h1>
+
+    <aside id="chat" class="col-sm-4 col-sm-offset-8">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <button class="btn btn-group btn-block btn-success col-sm-6" v-bind:class="{ hidden: btnisHidden }" v-on:click="mostrarform">
+                Consultas
+            </button>
+        </div>
+
+
+
+        <div class="panel panel-success " v-bind:class="{ hidden: isHidden }">
+           
+            <div class="card-header" style="background-color:rgb(92, 184, 92); height:85px; color:rgb(255, 255, 255)">
+                <table class="table">
+                    <tr>
+                        <td colspan="3" style="color: rgb(255, 255, 255)">
+                            <label>PREGUNTA LO QUE DESEES!!!</label>
+                        </td>
+                        <td>
+                           
+                        </td>
+                        <td colspan="2" style="text-align:right">
+                            <button class=" btn btn-group  btn-default " v-bind:class="{ hidden: isHidden }" v-on:click="cerrarform">X</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h1>FAQ</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <table class="table table-condensed">
+                <tr>
+                    <td>
+                    </td>
+
+                    <td colspan="2" style="text-align:right">
+                        <table>
+                            <tr>
+                                <td colspan="3"> </td>
+                                <td style="text-align:right; color:rgb(92, 184, 92)">  <label>Looks good!</label></td>
+                                <td style="text-align:right; color:rgb(92, 184, 92)">  <label>It's OK.</label></td>
+                            </tr>
+                        </table>
+                    </td>
+
+
+
+                </tr>
+                <tr>
+
+
+                    <td colspan="2" style="text-align:center; color:rgb(92, 184, 92)">  <label>Uhh.. Do I really have to say something?</label></td>
+                </tr>
+                <tr>
+
+
+                    <td colspan="3" style="text-align:center; color:rgb(92, 184, 92)">  <label>This suggestion is way too long for css purpose. Let's make it long... Longer, and more and more.. Never ending.</label></td>
+
+
+                </tr>
+            </table>
+
+            <div class="row">
+                <div class="col-sm-8 no-gutters ">
+                    <input maxlength="30" type="text" id="inputconsulta" class="form-control" name="consulta" placeholder="Escribe un mensaje" v-model="Consulta" />
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-group btn-block btn-success no-gutters">Enviar</button>
+                </div>
+                @*<template>
+                <button class="sc-user-input--button-icon-wrapper">
+                    <icon-base :color="color" width="20" height="20" :icon-name="tooltip">
+                        <slot />
+                    </icon-base>
+                </button>
+            </template>*@
+
+
+            </div>
+        </div>
+        <div class="row">
+
+
+            <div class="col-sm-8"></div>
+
+            <div class="col-sm-4">
+                <button class="btn btn-group btn-block btn-default" v-bind:class="{ hidden: isHidden }" v-on:click="cerrarform">Cerrar</button>
+            </div>
+        </div>
+    </aside>
+
+
+    @*VUE*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="~/js/Chat_Binding.js"></script>
+</Body>
